@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Mystery word</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="heading">
+        <ul>
+
+          <li><h4> Mystery word </h4></li>
+          {{^outOfGuess}}
+          <li><h4>you have {{#noOfGuess}}{{.}}{{/noOfGuess}} guesses left</h4></li>
+          {{/outOfGuess}}
+
+          {{#outOfGuess}}
+          <li><h4>You are out of guesses</h4></li>
+          {{/outOfGuess}}
+
+        </ul>
+      </div>
+
+      <div class="results_1">{{#guessedWord}}{{.}}{{/guessedWord}}</div>
+
+      <!--<div class="submit">
+       <form method='post' action="/index">
+          <select name="selLevel" class="selLevel" onchange="this.form.submit();">
+            <option value="easy" {{sel_1}} >Easy</option>
+            <option value="normal" {{sel_2}}>Normal</option>
+            <option value="hard" {{sel_3}}>Hard </option>
+          </select>
+          <input type="hidden" name="action" value="mode">
+        </form>
+    </div>-->
+
+      {{^resultsMsg}}
+      <div class="submit">
+      <form method='post' action="/index">
+        <input type="text" name = "txt_Guess" id= "txt_Guess">
+        <button type="submit">Make a Guess</button>
+        <input type="hidden" name="action" value="makeaguess">
+      </form>
+      </div>
+      {{/resultsMsg}}
+
+     {{#resultsMsg}}
+      <div class="submit">
+      <form method='post' action="/index">
+        <label>{{.}}</label>
+        <button type="submit" name="btn_Guess">Try again</button>
+        <input type="hidden" name="action" value="tryagain">
+      </form>
+      </div>
+     {{/resultsMsg}}
+
+      {{#guessedLetters}}<div class="results">Letters guessed: {{.}}</div>{{/guessedLetters}}
+      {{#repeatMsg}}<div>{{.}}</div>{{/repeatMsg}}
+      {{#errors}}<div>{{.}}</div>{{/errors}}
+    </div>
+  </body>
+</html>

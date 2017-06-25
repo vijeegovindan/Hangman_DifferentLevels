@@ -1,0 +1,98 @@
+body {
+  background-color: grey;
+  font-family: 'PT Sans';
+}
+
+.results{
+  padding :1vw 2vw 1vw 2vw;
+  margin: 1vw 2vw 2vw 2vw;
+  height: 2vw;
+  width: 80%;
+  font-size: 1.25em;
+}
+
+.results_1{
+  padding :1vw 2vw 1vw 2vw;
+  margin: 1vw 2vw 2vw 2vw;
+  height: 2vw;
+  width: 80%;
+  letter-spacing: 1.0vw;
+  font-size: 1.5em;
+}
+
+.submit{
+  padding :1vw;
+  margin: 1vw 2vw 2vw 2vw;
+  height: 5vw;
+  width: 80%;
+  align-items: center;
+}
+
+select{
+  width : 7vw;
+  padding: 1vw;
+}
+
+input{
+  width: 5vw;
+  height: 1.5vw;
+  font-size: 1em;
+}
+.errors {
+  display: flex;
+  flex-flow: column;
+}
+
+button {
+  box-shadow: 0.1vw 0.1vw black;
+  color: black;
+  background: white;
+  max-width: 20vw;
+  margin: 1vw;
+  padding: 0.25vw;
+  font-size: 0.75em;
+}
+
+label {
+  margin-top: 1vw;
+  font-size: 2em;
+  color: red;
+}
+
+.container {
+  width: 40%;
+  border: 2px dotted black;
+  padding: 2vw;
+  height: 40vw;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0.25vw;
+  list-style: none;
+  justify-content: space-between;
+}
+
+li{
+  list-style: none;
+}
+.errors{
+  color: red;
+  padding :1vw;
+  line-height: 0.25em;
+  margin: 1vw 8vw 2vw 8vw;
+  height: 2vw;
+  width: 50%;
+  font-size: 1em;
+}
+
+.letter {
+   display: inline-block;
+   list-style: none;
+   width: 20px;
+   margin: 0 5px;
+   border-bottom: 1px solid black;
+   text-align: center;
+   color: white;
+}
